@@ -1,9 +1,9 @@
-import { HiOutlineDeviceMobile } from 'react-icons/hi'
+
+import { BiPodcast } from 'react-icons/bi'
+
 function App () {
   return (
-    <div className='page'>
-      <h1>Mobile store <HiOutlineDeviceMobile /></h1>
-    </div>
+    <h1>Podcast App <BiPodcast /></h1>
   )
 }
 

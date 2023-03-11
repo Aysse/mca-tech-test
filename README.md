@@ -1,40 +1,44 @@
-# Front-end Test
+# Podcast App
 
-Esta prueba consiste en la creación de una mini-aplicación para comprar dispositivos moviles.
+## Enunciado
 
-1. La aplicación tendrá únicamente dos vistas:
+Esta prueba consiste en la creación de una mini-aplicación para escuchar podcasts musicales.
+La aplicación tendrá únicamente tres vistas:
+1. **Vista principal**
+2. **Detalles de un podcast**
+3. **Detalles de un capítulo de un podcast**
 
-    1. Vista principal - Listado de productos
-    2. Detalles del producto
+El diseño de las vistas se debe ceñir al mostrado junto a la descripción del detalle de las mismas
+(más abajo).
 
-2. La implementación de los diseños queda a libre elección, pero deberá seguir la
-estructura que se ha definido en las capturas. Se valorará positivamente el nivel de
-detalle de la propuesta.
+La aplicación será una Single Page Application de manera que la navegación se realizará siempre
+en cliente, sin refrescar completamente el documento principal en ningún momento.
 
-3. Se requiere la utilización de React/Preact para el desarrollo de aplicación y se podra
-complementar con otras librerias JS si se estima oportuno.
+La aplicación deberá tener un modo development en el que se sirvan los assets sin minimizar
+(pueden estar concatenados si se quiere) y otro modo production donde se deben servir los
+assets concatenados y minimizados.
 
-4. Se permite la utilización de JS con ES6, y preferiblemente que no se realize la prueba
-con Typescript.
+El objetivo final de la prueba es presentar un repositorio de código público (Github o Bitbucket)
+con la solución desarrollada. Es deseable que se vaya subiendo código a medida que se va
+avanzando en las diferentes secciones del proyecto (utilizando tags para dejar marcas de cada
+paso relevante) para poder evaluar la evolución de la implementación. En el repositorio deberá
+existir un archivo nombrado README donde se explicará cómo ejecutar la aplicación en ambos
+modos solicitados.
 
-5. Se prodrá utilizar un boilerplate template para la creación de la estructura del proyecto.
+#### Restricciones
 
-6. La aplicación será una SPA, donde se añadirá el enrutado de la vistas el codigo de
-cliente, sin que sea una MPA o la utilización de SSR.
+* Las URLs deberán ser limpias de modo que no se permite el uso del hash (#) para gestionar el enrutado.
+* Está permitido el uso de cualquier librería JS/CSS salvo los frameworks específicos AngularJS y Ember.
 
-7. El proyecto tendrá que contener los siguiente script, para poder gestionar la aplicación: 
-    1. START - Modo desarrollo 
-    2. BUILD - Compilación para modo Producción 
-    3. TEST - Lanzamiento de test 
-    4. LINT - Comprobación de código
+#### Aspectos permitidos
+* Se permite el uso de sintaxis ES2020 de Javascript.
+* Se permite el uso de herramientas tipo Webpack o Parcel.
+* La aplicación solo será revisada en la última versión de Google Chrome de escritorio, por lo que no es necesario tener en cuenta las particularidades de otros navegadores ni de tamaños de pantalla pequeños.
+* No será necesario realizar una gestión de errores de cara al usuario. Si se produce un error, solo se deberá mostrar en la consola del navegador su mensaje y su traza.
 
-8. El proyecto deberá presentarse en un repositorio de codigo abierto (Github, Gitlab,
-Bitbucket), con la solución al problema. Se quiere que se pueda subir el codigo de
-manera evolutiva de manera que se vaya alcanzando hitos.
+## Iniciar proyecto
 
-9. En el repositorio hay que incluir un documento README (preferiblemente incluirlo en el
-primer commit), donde se incluirá la explicación para ejecutar el proyecto asi como alguna nota explicativas o información adicional que se consideré necesaria.
-
-# Init
-pnpm install
-pnpm run start
+`pnpm run start`
+`pnpm run build`
+`pnpm run test`
+`pnpm run lint`
