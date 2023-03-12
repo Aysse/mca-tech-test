@@ -39,6 +39,9 @@ modos solicitados.
 ## Iniciar proyecto
 
 `pnpm run start`
+
 `pnpm run build`
+
 `pnpm run test`
+
 `pnpm run lint`
