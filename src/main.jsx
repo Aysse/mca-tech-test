@@ -6,6 +6,8 @@ import PodcastListPage from './routes/podcastListPage'
 import PodcastDetailPage from './routes/podcastDetailPage'
 import EpisodeDetailPage from './routes/episodeDetailPage'
 import ErrorPage from './error-page'
+import { BiPodcast } from 'react-icons/bi'
+import { FilterProvider } from './context/filters'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <h1>Podcast App <BiPodcast /></h1> {/* FIXME: Put Header */}
+    <FilterProvider>
+      <RouterProvider router={router} />
+    </FilterProvider>
   </React.StrictMode>
 )
