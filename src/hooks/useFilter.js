@@ -10,7 +10,7 @@ export function useFilter () {
     if (filter) {
       return podcasts.filter(podcast => {
         return (
-          podcast['im:name'].label.toLowerCase().includes(filter) || podcast['im:artist'].label.toLowerCase().includes(filter)
+          podcast['im:name'].label.toLowerCase().includes(filter.toLowerCase()) || podcast['im:artist'].label.toLowerCase().includes(filter.toLowerCase())
         )
       })
     }
