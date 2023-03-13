@@ -1,0 +1,30 @@
+.filters {
+    display: flex;
+    justify-content: right;
+    margin: 0 2rem 1rem 0;
+    background-color: white;
+}
+
+.box {
+    width: 35px;
+    background-color: #00bbff;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 0px 0px 0px rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    height: fit-content;
+    align-self: center;
+}
+
+input {
+    color-scheme: light;
+    width: 200px;
+    height: 30px;
+    box-shadow: 0 0px 0px 0px rgba(0, 0, 0, .05);
+    border-radius: 4px;
+}
+
+div {
+    margin-left: 10px;
+    padding: 1px
+}
