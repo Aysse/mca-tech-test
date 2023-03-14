@@ -1,18 +1,19 @@
-/* FIXME: Bad style when filtering */
 .podcasts {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
 }
 
 .podcasts ul {
+    width: 100%;
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(
         auto-fit,
         minmax(
             20%,
-            1fr
+            20%
         )
     );
     gap: 7rem 1rem;
