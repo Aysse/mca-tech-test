@@ -53,3 +53,9 @@ ul {
   list-style: none;
   padding: 0;
 }
+
+hr {
+    width: 100%;
+    border-color: rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+}
