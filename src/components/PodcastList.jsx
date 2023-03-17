@@ -1,13 +1,8 @@
 import './PodcastList.css'
 import { Link } from 'react-router-dom'
+import { getMaxResolutionSourceImg } from '../utils/getMaxResolutionSourceImg'
 
 export function PodcastList ({ podcasts }) {
-  const getMaxResolutionSourceImg = (imgArray) => {
-    if (imgArray.length > 0) {
-      return imgArray[imgArray.length - 1].label
-    }
-  }
-
   return (
     <main className='podcasts'>
       <ul>
