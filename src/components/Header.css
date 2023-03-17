@@ -1,0 +1,8 @@
+.linkHome { 
+    font-size: larger;
+    font-weight: bold;
+    float: left;
+    margin-left: 150px;
+    margin-bottom: 10px;
+    color: rgb(25, 90, 181) !important;
+}
