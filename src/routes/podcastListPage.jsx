@@ -3,6 +3,7 @@ import { PodcastList } from '../components/PodcastList'
 import { fetchPodcasts } from '../services/podcasts'
 import { useFilter } from '../hooks/useFilter'
 import { Filter } from '../components/Filter'
+import { Header } from '../components/Header'
 
 function PodcastListPage () {
   const { filter, filterPodcasts } = useFilter()
@@ -33,6 +34,7 @@ function PodcastListPage () {
   const podcastsFiltered = filterPodcasts(podcasts)
   return (
     <div>
+      <Header />
       <Filter numPodcasts={podcastsFiltered.length} />
       <PodcastList podcasts={podcastsFiltered} />
     </div>
