@@ -1,0 +1,9 @@
+.episode-details {
+    justify-content: left;
+    margin-top: 50px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 0px 20px;
+    margin-right: 10px;
+}
