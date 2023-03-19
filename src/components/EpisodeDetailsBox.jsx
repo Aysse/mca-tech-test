@@ -1,4 +1,4 @@
-import './EpisodeDetailsBox.css'
+import './css/EpisodeDetailsBox.css'
 
 export function EpisodeDetailsBox ({ episode }) {
   console.log(episode)

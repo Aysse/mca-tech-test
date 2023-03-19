@@ -1,4 +1,4 @@
-import './ImageBox.css'
+import './css/ImageBox.css'
 
 export function ImageBox ({ podcast }) {
   const { defaultData } = podcast

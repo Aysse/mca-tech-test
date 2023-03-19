@@ -1,6 +1,6 @@
 import { useId } from 'react'
 import { useFilter } from '../hooks/useFilter'
-import './Filter.css'
+import './css/Filter.css'
 
 export function Filter ({ numPodcasts }) {
   const { filter, setFilter } = useFilter()

@@ -1,4 +1,4 @@
-import './EpisodesBox.css'
+import './css/EpisodesBox.css'
 import { durationMapper } from '../utils/duration.mapper'
 import { Table } from 'antd'
 import { Link } from 'react-router-dom'

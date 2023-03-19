@@ -1,4 +1,4 @@
-import './PodcastList.css'
+import './css/PodcastList.css'
 import { Link } from 'react-router-dom'
 import { getMaxResolutionSourceImg } from '../utils/getMaxResolutionSourceImg'
 
