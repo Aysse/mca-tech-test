@@ -4,7 +4,7 @@ import { Table } from 'antd'
 import { Link } from 'react-router-dom'
 import { dateMapper } from '../utils/date.mapper'
 
-export function EpisodesBox ({ episodes = [] }) {
+export function EpisodesBox ({ episodes = [], podcast }) {
   const columns = [
     {
       title: 'Title',
@@ -13,7 +13,7 @@ export function EpisodesBox ({ episodes = [] }) {
         compare: (a, b) => a.title.localeCompare(b.title),
         multiple: 1
       },
-      render: (text, { id }) => <Link to={`episode/${id}`}>{text}</Link>
+      render: (text, { id }) => <Link to={`episode/${id}`} state={{ podcast, episode: episodes.find(ep => ep.id === id) }}>{text}</Link>
     },
     {
       title: 'Date',
