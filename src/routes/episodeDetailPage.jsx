@@ -1,10 +1,13 @@
+import { useLocation } from 'react-router-dom'
 import { Header } from '../components/Header'
+import { EpisodeDetails } from '../components/EpisodeDetail'
 
 export default function EpisodeDetailPage () {
+  const { state } = useLocation()
   return (
     <div>
       <Header />
-      <h1>Detalle de un episodio</h1>
+      <EpisodeDetails podcast={state.podcast} episode={state.episode} />
     </div>
   )
 }

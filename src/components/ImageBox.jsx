@@ -1,6 +1,11 @@
 import './ImageBox.css'
 
-export function ImageBox ({ image, title, author, description }) {
+export function ImageBox ({ podcast }) {
+  const { defaultData } = podcast
+  const image = podcast.imageSecondary?.href || defaultData.imageHref
+  const title = podcast.title || defaultData.title
+  const author = podcast.author || defaultData.author
+  const description = podcast.description || podcast.summary || defaultData.description
   return (
     <div className='image-box'>
       <img src={image} alt={title} />

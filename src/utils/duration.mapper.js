@@ -4,6 +4,8 @@ export const durationMapper = (duration) => {
     return '--:--'
   }
 
+  if (duration._text.includes(':')) return duration._text
+
   const hour = Math.floor(parseInt(duration._text) / 3600)
   const remainingSec = parseInt(duration._text) % 3600
   const min = Math.floor(remainingSec / 60)

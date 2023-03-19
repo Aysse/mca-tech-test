@@ -65,7 +65,7 @@ export async function fetchPodcastDetail (podcastId) {
           id: episode.guid?._text || i,
           title: episode.title?._text,
           date: episode.pubDate?._text,
-          description: episode.description?._cdata,
+          description: episode.description?._cdata || episode.description?._text || episode['itunes:summary']?._text,
           audio: episode.enclosure,
           duration: episode['itunes:duration']
         }
