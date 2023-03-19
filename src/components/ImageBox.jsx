@@ -6,11 +6,11 @@ export function ImageBox ({ image, title, author, description }) {
       <img src={image} alt={title} />
       <hr />
       <div className='info'>
-        <p /><div className='podcastTitle'>{title}</div>
-        <p /><div className='desc'>by {author}</div>
+        <div className='podcastTitle'>{title}</div>
+        <div className='desc'>by {author}</div>
         <hr />
-        <p /><div className='descTitle'>Description:</div>
-        <p /><div className='desc'>{description}</div>
+        <div className='descTitle'>Description:</div>
+        <div dangerouslySetInnerHTML={{ __html: description }} className='desc' />
       </div>
     </div>
   )
