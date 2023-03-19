@@ -1,0 +1,6 @@
+.podcast-detail {
+    display: flex;
+    gap: 50px;
+    font-size: 12px;
+    text-align: left;
+}

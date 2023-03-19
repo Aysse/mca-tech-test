@@ -1,0 +1,32 @@
+.image-box {
+    width: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+img {
+    width: 150px;
+    border-radius: 5px;
+}
+
+.podcastTitle {
+    font-weight: bold;;
+}
+
+.info {
+}
+
+.desc {
+    color: rgba(0, 0, 0, 0.5);
+    font-style: italic;
+}
+
+.descTitle {
+    font-weight: bold;
+}
