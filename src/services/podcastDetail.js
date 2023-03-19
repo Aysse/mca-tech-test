@@ -60,8 +60,9 @@ export async function fetchPodcastDetail (podcastId) {
     if (podcastDetails) {
       const podcastDetailsChannel = podcastDetails.rss.channel
       const episodes = podcastDetailsChannel.item
-      const episodesMapped = episodes.map(episode => {
+      const episodesMapped = episodes.map((episode, i) => {
         return {
+          id: episode.guid?._text || i,
           title: episode.title?._text,
           date: episode.pubDate?._text,
           description: episode.description?._cdata,
@@ -73,6 +74,7 @@ export async function fetchPodcastDetail (podcastId) {
       const podcasts = JSON.parse(window.localStorage.getItem('podcasts'))
 
       const podcastDetailsMapped = {
+        id: podcastId,
         title: podcastDetailsChannel.title?._text,
         summary: podcastDetailsChannel['itunes:summary']?._cdata,
         image: {

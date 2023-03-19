@@ -1,0 +1,74 @@
+import './EpisodesBox.css'
+import { durationMapper } from '../utils/duration.mapper'
+import { Table } from 'antd'
+import { Link } from 'react-router-dom'
+import { dateMapper } from '../utils/date.mapper'
+
+export function EpisodesBox ({ episodes = [] }) {
+  const columns = [
+    {
+      title: 'Title',
+      dataIndex: 'title',
+      sorter: {
+        compare: (a, b) => a.title.localeCompare(b.title),
+        multiple: 1
+      },
+      render: (text, { id }) => <Link to={`episode/${id}`}>{text}</Link>
+    },
+    {
+      title: 'Date',
+      dataIndex: 'date',
+      sorter: {
+        compare: (a, b) => {
+          const aDateStr = a.date.split('/')
+          const aDateISO = `${aDateStr[2]}-${aDateStr[1]}-${aDateStr[0]}`
+          const aDate = new Date(aDateISO)
+
+          const bDateStr = b.date.split('/')
+          const bDateISO = `${bDateStr[2]}-${bDateStr[1]}-${bDateStr[0]}`
+          const bDate = new Date(bDateISO)
+
+          return aDate - bDate
+        },
+        multiple: 2
+      }
+    },
+    {
+      title: 'Duration',
+      dataIndex: 'duration',
+      sorter: {
+        compare: (a, b) => {
+          const aTime = new Date(`1970-01-01T${a.duration}`)
+          const bTime = new Date(`1970-01-01T${b.duration}`)
+          return aTime - bTime
+        },
+        multiple: 3
+      }
+    }
+  ]
+
+  const data = episodes.map((episode, i) => {
+    return {
+      key: i,
+      id: episode.id,
+      title: episode.title,
+      date: dateMapper(episode.date),
+      duration: durationMapper(episode.duration)
+    }
+  })
+
+  const onChange = (pagination, filters, sorter, extra) => {
+    console.log('params', pagination, filters, sorter, extra)
+  }
+
+  if (!episodes || episodes.length < 1) return (<div>No Episodes found</div>)
+
+  return (
+    <div className='episodes-box'>
+      <div className='num-episodes'>Episodes: {episodes.length}</div>
+      <div className='view-episodes'>
+        <Table className='table-episodes' columns={columns} dataSource={data} onChange={onChange} />
+      </div>
+    </div>
+  )
+}
