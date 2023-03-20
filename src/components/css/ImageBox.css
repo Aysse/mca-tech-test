@@ -2,12 +2,14 @@
     width: 350px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 20%);
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    height: fit-content;
 }
 
 img {
@@ -17,9 +19,6 @@ img {
 
 .podcastTitle {
     font-weight: bold;;
-}
-
-.info {
 }
 
 .desc {

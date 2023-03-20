@@ -1,7 +1,6 @@
 import './css/EpisodeDetailsBox.css'
 
 export function EpisodeDetailsBox ({ episode }) {
-  console.log(episode)
   return (
     <div className='episode-details'>
       <h1>{episode.title}</h1>

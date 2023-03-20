@@ -10,7 +10,7 @@ export function ImageBox ({ podcast }) {
     <div className='image-box'>
       <img src={image} alt={title} />
       <hr />
-      <div className='info'>
+      <div>
         <div className='podcastTitle'>{title}</div>
         <div className='desc'>by {author}</div>
         <hr />
