@@ -63,8 +63,8 @@ export async function fetchPodcastDetail (podcastId) {
       const episodesMapped = episodes.map((episode, i) => {
         return {
           id: episode.guid?._text || i,
-          title: episode.title?._text,
-          date: episode.pubDate?._text,
+          title: episode.title?._text || episode.title?._cdata,
+          date: episode.pubDate?._text || episode.title?._text,
           description: episode.description?._cdata || episode.description?._text || episode['itunes:summary']?._text,
           audio: episode.enclosure,
           duration: episode['itunes:duration']
