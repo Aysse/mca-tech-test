@@ -38,10 +38,12 @@ modos solicitados.
 
 ## Iniciar proyecto
 
-`pnpm run start`
+1. Para iniciar la aplicación en modo development, ejecuta:
+`pnpm run dev`
 
-`pnpm run build`
+2. Para compilar la aplicación en modo "development", ejecuta:
+`pnpm run build:dev`
+Esto generará una compilación de desarrollo que no está minimizada y se almacenará en la carpetadist.
 
-`pnpm run test`
-
-`pnpm run lint`
+3. Para compilar la aplicación en modo "production" deberás ejecutar
+`pnpm run build:prod`
