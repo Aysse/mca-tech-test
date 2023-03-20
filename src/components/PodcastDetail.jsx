@@ -1,4 +1,4 @@
-import './PodcastDetail.css'
+import './css/PodcastDetail.css'
 import { ImageBox } from './ImageBox'
 import { EpisodesBox } from './EpisodesBox'
 

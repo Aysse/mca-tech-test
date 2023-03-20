@@ -6,8 +6,10 @@
 
 .num-episodes {
     font-weight: bold;
+    font-size: large;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 20%);
     padding: 5px 15px;
     text-align: left;
     margin-bottom: 20px;
@@ -17,8 +19,8 @@
     font-weight: bold;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    text-align: left;
-    
+    box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 20%);
+    height: fit-content;
 }
 
 .view-episodes a:link {
@@ -33,5 +35,4 @@
 
 .table-episodes .ant-table {
     font-size: 12px;
-    margin: 5px;
 }

@@ -1,4 +1,4 @@
-import './EpisodesBox.css'
+import './css/EpisodesBox.css'
 import { durationMapper } from '../utils/duration.mapper'
 import { Table } from 'antd'
 import { Link } from 'react-router-dom'
@@ -11,7 +11,6 @@ export function EpisodesBox ({ episodes = [], podcast }) {
       dataIndex: 'title',
       sorter: {
         compare: (a, b) => a.title.localeCompare(b.title),
-        multiple: 1
       },
       render: (text, { id }) => <Link to={`episode/${id}`} state={{ podcast, episode: episodes.find(ep => ep.id === id) }}>{text}</Link>
     },
@@ -29,8 +28,7 @@ export function EpisodesBox ({ episodes = [], podcast }) {
           const bDate = new Date(bDateISO)
 
           return aDate - bDate
-        },
-        multiple: 2
+        }
       }
     },
     {
@@ -41,8 +39,7 @@ export function EpisodesBox ({ episodes = [], podcast }) {
           const aTime = new Date(`1970-01-01T${a.duration}`)
           const bTime = new Date(`1970-01-01T${b.duration}`)
           return aTime - bTime
-        },
-        multiple: 3
+        }
       }
     }
   ]
@@ -57,17 +54,13 @@ export function EpisodesBox ({ episodes = [], podcast }) {
     }
   })
 
-  const onChange = (pagination, filters, sorter, extra) => {
-    console.log('params', pagination, filters, sorter, extra)
-  }
-
   if (!episodes || episodes.length < 1) return (<div>No Episodes found</div>)
 
   return (
     <div className='episodes-box'>
       <div className='num-episodes'>Episodes: {episodes.length}</div>
       <div className='view-episodes'>
-        <Table className='table-episodes' columns={columns} dataSource={data} onChange={onChange} />
+        <Table className='table-episodes' columns={columns} dataSource={data} />
       </div>
     </div>
   )
