@@ -8,5 +8,8 @@ export default defineConfig({
     alias: {
       stream: 'readable-stream'
     }
+  },
+  build: {
+    minify: false
   }
 })
