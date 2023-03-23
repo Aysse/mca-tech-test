@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './css/ImageBox.css'
 
 export function ImageBox ({ podcast }) {
@@ -8,10 +9,10 @@ export function ImageBox ({ podcast }) {
   const description = podcast.description || podcast.summary || defaultData.description
   return (
     <div className='image-box'>
-      <img src={image} alt={title} />
+      <Link to={`/podcast/${podcast.id}`}><img src={image} alt={title} /></Link>
       <hr />
       <div>
-        <div className='podcastTitle'>{title}</div>
+        <Link to={`/podcast/${podcast.id}`} className='podcastTitle'>{title}</Link>
         <div className='desc'>by {author}</div>
         <hr />
         <div className='descTitle'>Description:</div>
