@@ -27,18 +27,11 @@ export default function PodcastDetailPage () {
       })
   }, [])
 
-  if (isLoading) {
-    return <div>Cargando...</div>
-  }
-
-  if (error) {
-    return <div>{error.message}</div>
-  }
-
   return (
     <div>
-      <Header />
-      {podcastDetail ? <PodcastDetail podcast={podcastDetail} /> : <h1>No Podcast info</h1>}
+      <Header loading={isLoading} />
+      {error && <h1>{error.message}</h1>}
+      {!error && podcastDetail ? <PodcastDetail podcast={podcastDetail} /> : !isLoading && <h1>No Podcast info</h1>}
     </div>
   )
 }
