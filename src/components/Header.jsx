@@ -1,14 +1,14 @@
 import './css/Header.css'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-export function Header () {
-  const location = useLocation()
+export function Header ({ loading }) {
+  console.log('LOADING:', loading)
 
   return (
     <div>
       <div className='header-columns'>
         <Link to='/' className='linkHome'>Podcaster</Link>
-        {location.pathname === '/' && <div className='indicator' />}
+        {loading && <div className='indicator' />}
       </div>
       <hr style={{ width: '100%', marginTop: '20px' }} />
     </div>

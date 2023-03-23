@@ -23,20 +23,13 @@ function PodcastListPage () {
       })
   }, [filter])
 
-  if (isLoading) {
-    return <div>Cargando...</div>
-  }
-
-  if (error) {
-    return <div>{error.message}</div>
-  }
-
   const podcastsFiltered = filterPodcasts(podcasts)
   return (
     <div>
-      <Header />
-      <Filter numPodcasts={podcastsFiltered.length} />
-      <PodcastList podcasts={podcastsFiltered} />
+      <Header loading={isLoading} />
+      {error
+        ? <div>{error.message}</div>
+        : <><Filter numPodcasts={podcastsFiltered.length} /><PodcastList podcasts={podcastsFiltered} /></>}
     </div>
   )
 }
