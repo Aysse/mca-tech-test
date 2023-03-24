@@ -2,8 +2,6 @@ import './css/Header.css'
 import { Link } from 'react-router-dom'
 
 export function Header ({ loading }) {
-  console.log('LOADING:', loading)
-
   return (
     <div>
       <div className='header-columns'>
